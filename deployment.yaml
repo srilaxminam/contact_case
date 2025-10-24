@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contact-list
+  labels:
+    app: contact-list
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: contact-list
+  template:
+    metadata:
+      labels:
+        app: contact-list
+    spec:
+      containers:
+      - name: contact-list
+        image: yourdockerhubusername/contact-list:latest
+        ports:
+        - containerPort: 5000
