@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    IMAGE = 'yourdockerhubusername/contact-list'
+    IMAGE = 'srilaxmidev/contact_case'
   }
 
   stages {
